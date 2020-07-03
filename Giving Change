@@ -1,0 +1,86 @@
+echo "# The-Birth-of-BixoDanado" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/helamanzee/The-Birth-of-BixoDanado.git
+git push -u origin master
+        import java.util.Scanner; 
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner Lifni = new Scanner(System.in);
+      int penny = 1, nickel = 5, dime = 10, quarter = 25, dollar = 100;
+      int pennyCounter = 0, nickelCounter = 0, dimeCounter = 0, quarterCounter = 0, dollarCounter = 0;
+      int change = Lifni.nextInt();
+      
+      if (change == 0) {
+         System.out.println("No change");  
+      }
+      
+      do {
+      if (change > dollar) {
+         dollarCounter = change / dollar;
+         change = change % dollar;
+      }   
+      else if (change > quarter) {
+         quarterCounter = change / quarter;
+         change = change % quarter;
+      }
+      else if (change > dime) {
+         dimeCounter = change / dime;
+         change = change % dime;
+      }
+      else if (change > nickel) {
+         nickelCounter = change / nickel;
+         change = change % nickel;
+      }
+      else {
+         pennyCounter = change / penny;
+         change = change % penny;
+      }
+      } while (change != 0);
+   
+      if (dollarCounter > 0) {
+         if (dollarCounter >= 2) {
+            System.out.println(dollarCounter + " Dollars");
+         }
+         else {
+            System.out.println(dollarCounter + " Dollar");
+         }
+      }
+      if (quarterCounter > 0) {
+         if (quarterCounter >= 2) {
+            System.out.println(quarterCounter + " Quarters");
+         }
+         else {
+            System.out.println(quarterCounter + " Quarter");
+         }
+      }
+      if (dimeCounter > 0) {
+         if (dimeCounter >= 2) {
+            System.out.println(dimeCounter + " Dimes");
+         }
+         else {
+            System.out.println(dimeCounter + " Dime");
+         }
+      }
+      if (nickelCounter > 0) {
+         if (nickelCounter >= 2) {
+            System.out.println(nickelCounter + " Nickels");
+         }
+         else {
+            System.out.println(nickelCounter + " Nickel");
+         }
+      }
+      if (pennyCounter > 0) {
+         if (pennyCounter >= 2) {
+            System.out.println(pennyCounter + " Pennies");
+         }
+         else {
+            System.out.println(pennyCounter + " Penny");
+         }
+      }
+   }
+}
+
+        
