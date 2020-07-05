@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner Lifni = new Scanner(System.in);
+      char lookFor;
+      String str1;
+      int counter = 0;
+      int i;
+      
+      lookFor = Lifni.next().charAt(0);
+      str1 = Lifni.nextLine();
+      
+      for (i = 0; i < str1.length(); i++) {
+         char position = str1.charAt(i);
+         if (position == lookFor) {
+            counter += 1;
+         }
+      }
+      System.out.println(counter);
+   }
+}
