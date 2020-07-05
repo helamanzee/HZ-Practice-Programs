@@ -1,0 +1,46 @@
+public class GoldenNuggets {
+    /**
+     * @param args the command line arguments
+     */    
+    int sumOfNums, maxNum, avgNum, totNums;
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int rand1;
+        Random rand = new Random();
+        GoldenNuggets Lifni1 = new GoldenNuggets();
+        rand1 = rand.nextInt(100) + 1;
+        
+        Lifni1.userData(rand1);
+	Lifni1.displayResults();
+
+    }
+    public void userData(int rand1) {
+        Scanner Lifni = new Scanner(System.in);
+        int i;       
+        int userInput;
+        do {
+        System.out.println("Please enter a number between 9 and 20, exclusive:");
+        userInput = Lifni.nextInt();
+        } while (userInput <= 9 & userInput >= 20);
+                
+        for (i = 0; i < userInput; i++) {
+            int num = 0;
+            
+            if (rand1 > num) {
+                maxNum = rand1;
+            }
+            
+            sumOfNums += rand1;
+            totNums += 1;
+        }
+        avgNum = sumOfNums / userInput;
+    }
+    public void displayResults() {
+        
+        System.out.println("There were " + totNums + " numbers generated");
+        System.out.println("The highest number generated is " + maxNum);
+        System.out.println("The sum of the numbers is " + sumOfNums);
+        System.out.println("The average of these numbers is " + avgNum);
+    }
+}
+
